@@ -46,21 +46,25 @@ class App extends React.Component {
         return (
             <Router>
                 <Container className='p-0' fluid>
-                    <NavBar position='sticky' bg='transparent' expand='lg'>
+
+                    <NavBar position='sticky' expand='lg'>
                         <NavBar.Brand id='brand'>ROHAN</NavBar.Brand>
 
                         <NavBar.Toggle aria-controller='navbar-toggle'/>
                         <NavBar.Collapse id='navbar-toggle'>
                             <Nav className='ml-auto'>
-                                <Link className='nav-link' to='/'><p className="navLinks">Home</p></Link>
-                                <Link className='nav-link' smooth={true} duration={500} to='about'><p className="navLinks">About</p></Link>
+                                <Link className='nav-link' offset={-150} smooth={true} duration={500} to='home'><p className="navLinks">Home</p></Link>
+                                <Link className='nav-link' offset={-150} smooth={true} duration={500} to='about'><p className="navLinks">About</p></Link>
                                 <Link className='nav-link' to='/projects'><p className="navLinks">Projects</p></Link>
                                 <Link className='nav-link' to='/contact'><p className="navLinks">Contact</p></Link>
                             </Nav>
                         </NavBar.Collapse>
                     </NavBar>
 
-                    <Home />
+
+                    <Element name='home'>
+                        <Home />
+                    </Element>
 
                     <Element name='about'>
                         <About />
@@ -73,6 +77,10 @@ class App extends React.Component {
 
             </Router>
         );
+    }
+
+    handleScroll() {
+
     }
 }
 
