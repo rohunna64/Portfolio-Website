@@ -43,6 +43,11 @@
         src: local('Gilmer_Light'),url(./fonts/Gilmer_Light.ttf) format('truetype');
 }
 
+@font-face {
+        font-family: 'Gilmer Medium';
+        src: local('Gilmer_Medium'),url(./fonts/Gilmer_Medium.ttf) format('truetype');
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -60,7 +65,6 @@ code {
 }
 
 .navbar {
-    /* padding-top: 20px !important; */
     padding-right: 75px !important;
     position: -webkit-sticky !important;
     position: sticky !important;
@@ -107,8 +111,6 @@ p.navLinks:hover::after {
     width: 0%;
 }
 
-
-
 #brand {
     color: #ffd400;
     font-family: 'Gilmer Heavy';
@@ -144,25 +146,23 @@ p.navLinks:hover::after {
 
 img.homePic {
     width: auto;
-    height: 500px;
+    height: 560px;
+    /* margin-bottom: 10px; */
 }
 
-img.aboutPic {
-    width: auto;
-    height: 20%;
-}
 
 .arrowDiv {
     background-color: transparent;
-    height: 100px;
+    height: 70px;
     position: relative;
     width: 100%;
-    margin-top: 70px;
+    margin-top: 95px;
     margin-bottom: 100px;
+    transition: 0.7s;
 }
 
 .arrowDiv:hover {
-    background-color: black;
+    background-color: #292929;
 }
 
 @keyframes bouncing {
@@ -171,22 +171,23 @@ img.aboutPic {
     100% {bottom: 0;}
 }
 
-.arrow {
-    animation: bouncing 1s infinite ease-in-out;
+.scrollArrow {
+    animation: bouncing 2s infinite ease-in-out;
     bottom: 0;
     display: block;
     height: 50px;
     left: 50%;
     margin-left: -25px;
     position: absolute;
-    width: 50px;
+    width: 50px
 }
 
 .aboutTitle {
     color: white;
-    font-family: 'Gilmer Regular';
+    font-family: 'Gilmer Medium';
     text-align: center;
     font-size: 35px;
+    margin-top: 200px;
 }
 
 .svgRow {
@@ -236,19 +237,171 @@ img.aboutPic {
     text-decoration:none;
     font-family: 'Gilmer Regular';
     font-weight:300;
-    color: #ffd400;
+    color: #ffd400 !important;
     text-align:center;
-    transition: all 0.4s;
+    transition: all 0.7s;
+    border: 1px solid #ffd400;
+    background-color: transparent;
+    letter-spacing: 3px;
+
+}
+
+.button:hover {
+    text-decoration:none;
+    color: black !important;
+    background-color: #ffd400;
+
+}
+
+.card {
+    background-color: black !important;
+    z-index: 0;
+    border: 0px !important;
+    font-family: 'Gilmer Regular' !important;
+    opacity: 90%;
+}
+.card:hover {
+    /* background-color: #ffd400 !important; */
+    box-shadow: 5px 10px 20px 1px rgb(0,0,0,0.253) !important;
+}
+
+.card-title {
+    color: #ffd400 !important;
+    font-size: 25px !important;
+
+}
+
+.card-subtitle {
+    color: white !important;
+}
+
+.card-text {
+    color: white !important;
+}
+
+.bgdProjects {
+    color: white;
+    font-family: 'Gilmer heavy';
+    opacity: 5%;
+    z-index: -1;
+    font-size: 100px;
+    text-align: right;
+    margin-top: -10px;
+    margin-right: -150px;
+}
+
+#projectLink {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-right: 1.25rem;
+    font-size: x-large !important;
+}
+.cardFooter {
+    display: inline-block;
+}
+
+.subContact {
+    color: white;
+    font-family: 'Gilmer Heavy';
+    font-size: 50px;
+}
+
+.subContact2 {
+    color: #ffd400;
+    font-family: 'Gilmer Heavy';
+    font-size: 50px;
+}
+
+
+.formCol {
+    padding-left: 80px !important;
+}
+
+label {
+    color: #ffd400;
+    font-family: 'Gilmer Bold';
+    font-size: 20px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: 0px;
+    background-color: black;
+    color: white;
+    font-size: 20px !important;
+    font-family: 'Gilmer regular' !important;
+    margin-bottom: 10px !important;
+    padding-left: 10px;
+}
+
+input:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px black inset !important;
+}
+
+/*Change text in autofill textbox*/
+input:-webkit-autofill {
+    -webkit-text-fill-color: white !important;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    color: white;
+    border: 0px;
+    background-color: black;
+    font-family: 'Gilmer regular' !important;
+    font-size: 20px !important;
+    padding-left: 10px;
+    margin-bottom: 10px !important;
+}
+
+textarea:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+.newButton {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    font-family: 'Gilmer Regular';
+    font-weight:300;
+    color: #ffd400 !important;
+    text-align:center;
+    transition: all 0.7s;
     border: 1px solid #ffd400;
     background-color: transparent;
     letter-spacing: 3px;
 }
 
-.button:hover {
-    text-decoration:none;
-    color: black;
-    background-color: #ffd400;
+.newButton:hover {
+    background-color: white;
+}
 
+button:focus {
+    outline: -webkit-focus-ring-color auto 0px !important;
+}
+
+
+.bgdContact {
+    color: white;
+    font-family: 'Gilmer heavy';
+    opacity: 5%;
+    z-index: -1;
+    font-size: 100px;
+    text-align: left;
+    margin-top: -70px;
+    margin-left: 890px;
 }
 
 .fa {
@@ -262,6 +415,7 @@ img.aboutPic {
 
 #copyright {
     color: white;
+    font-family: 'Gilmer regular';
 }
 
 footer {

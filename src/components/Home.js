@@ -1,8 +1,10 @@
+import arrow from './images/arrow.png';
+
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import homePic from './homePic.png';
+import homePic from './images/homePic.png';
 import Typed from 'react-typed';
 
 import * as Scroll from 'react-scroll';
@@ -33,9 +35,11 @@ function Home() {
                     </Col>
                 </Row>
             </Container>
-            <div className='arrowDiv'>
-                <img class="arrow" src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-128.png" />
-            </div>
+            <Link className='nav-link' offset={-150} smooth={true} duration={500} to='about'>
+                <div className='arrowDiv'>
+                    <img class="scrollArrow" src={arrow} />
+                </div>
+            </Link>
         </React.Fragment>
     );
 

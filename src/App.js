@@ -1,6 +1,9 @@
 import Home from './components/Home';
 import About from './components/About';
 import Footer from './components/Footer';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+
 
 import React from 'react';
 import './App.css';
@@ -19,9 +22,6 @@ import Nav from 'react-bootstrap/Nav';
 import * as Scroll from 'react-scroll';
 import { Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 let Link = Scroll.Link;
-
-
-
 
 
 class App extends React.Component {
@@ -55,8 +55,8 @@ class App extends React.Component {
                             <Nav className='ml-auto'>
                                 <Link className='nav-link' offset={-150} smooth={true} duration={500} to='home'><p className="navLinks">Home</p></Link>
                                 <Link className='nav-link' offset={-150} smooth={true} duration={500} to='about'><p className="navLinks">About</p></Link>
-                                <Link className='nav-link' to='/projects'><p className="navLinks">Projects</p></Link>
-                                <Link className='nav-link' to='/contact'><p className="navLinks">Contact</p></Link>
+                                <Link className='nav-link' offset={-150} smooth={true} duration={500} to='projects'><p className="navLinks">Projects</p></Link>
+                                <Link className='nav-link' smooth={true} duration={500} to='contact'><p className="navLinks">Contact</p></Link>
                             </Nav>
                         </NavBar.Collapse>
                     </NavBar>
@@ -70,6 +70,13 @@ class App extends React.Component {
                         <About />
                     </Element>
 
+                    <Element name='projects'>
+                        <Projects />
+                    </Element>
+
+                    <Element name='contact'>
+                        <Contact />
+                    </Element>
 
                     <Footer />
 
