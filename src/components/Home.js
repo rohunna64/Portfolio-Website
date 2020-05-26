@@ -35,7 +35,7 @@ function Home() {
                     </Col>
                 </Row>
             </Container>
-            <Link className='nav-link' offset={-150} smooth={true} duration={500} to='about'>
+            <Link offset={-150} smooth={true} duration={500} to='about'>
                 <div className='arrowDiv'>
                     <img class="scrollArrow" src={arrow} />
                 </div>

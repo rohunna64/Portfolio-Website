@@ -159,6 +159,7 @@ img.homePic {
     margin-top: 95px;
     margin-bottom: 100px;
     transition: 0.7s;
+
 }
 
 .arrowDiv:hover {
@@ -402,6 +403,16 @@ button:focus {
     text-align: left;
     margin-top: -70px;
     margin-left: 890px;
+}
+
+.success-msg {
+    color: white;
+    padding: 10px 15px;
+}
+
+.err-msg {
+    color: white;
+    padding: 10px 15px;
 }
 
 .fa {

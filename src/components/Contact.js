@@ -3,34 +3,61 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import axios from 'axios'
-
+import Axios from 'axios';
 
 class Contact extends React.Component {
 
     constructor(props) {
     	super(props);
-        	this.state = {
+        this.state = {
           	name: '',
           	email: '',
-          	message: ''
+          	message: '',
+            disabled: false,
+            emailSent: null,
 	   }
+   }
+
+   onNameChange(event) {
+       this.setState({name: event.target.value})
+   }
+
+   onEmailChange(event) {
+       this.setState({email: event.target.value})
+   }
+
+   onMessageChange(event) {
+       this.setState({message: event.target.value})
    }
 
    handleSubmit(event) {
        event.preventDefault();
-       axios({
-           method: "POST",
-           url:"http://localhost:3000/send",
-           data:  this.state
-       }).then((response)=>{
-           if (response.data.status === 'success'){
-               alert("Message Sent.");
-               this.resetForm()
-           } else if(response.data.status === 'fail'){
-               alert("Message failed to send.")
-           }
-       })
+
+       this.setState({
+           disabled: true,
+           emailSent: false
+       });
+
+       Axios.post('http://localhost:3030/api/email', this.state)
+            .then(res => {
+                if(res.data.success) {
+                    this.setState({
+                        disabled: false,
+                        emailSent: true
+                    });
+                } else {
+                    this.setState({
+                        disabled: false,
+                        emailSent: true
+                    });
+                }
+            })
+            .catch(err => {
+                this.setState({
+                    disabled: false,
+                    emailSent: false
+                });
+            })
 
    }
 
@@ -71,7 +98,10 @@ class Contact extends React.Component {
                                 <label for="message">Message</label>
                                 <textarea id='message' rows="8" cols='50' value={this.state.message} onChange={this.onMessageChange.bind(this)}></textarea>
                             </div>
-                            <button type='submit' className="button">SEND MESSAGE</button>
+                            <button type='submit' className="button" disabled={this.state.disabled}>SEND MESSAGE</button>
+
+                            {this.state.emailSent === true && <p className='d-inline success-msg'>Email Sent.</p>}
+
                         </form>
                     </Col>
                     <h1 className='bgdContact'>contact</h1>
@@ -80,17 +110,7 @@ class Contact extends React.Component {
         );
     }
 
-    onNameChange(event) {
-        this.setState({name: event.target.value})
-    }
 
-    onEmailChange(event) {
-        this.setState({email: event.target.value})
-    }
-
-    onMessageChange(event) {
-        this.setState({message: event.target.value})
-    }
 
 }
 
