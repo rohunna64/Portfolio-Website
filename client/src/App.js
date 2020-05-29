@@ -52,10 +52,10 @@ class App extends React.Component {
                         <NavBar.Toggle aria-controller='navbar-toggle'/>
                         <NavBar.Collapse id='navbar-toggle'>
                             <Nav className='ml-auto'>
-                                <Link className='nav-link' offset={-150} smooth={true} duration={500} to='home'><p className="navLinks">Home</p></Link>
-                                <Link className='nav-link' offset={-150} smooth={true} duration={500} to='about'><p className="navLinks">About</p></Link>
-                                <Link className='nav-link' offset={-150} smooth={true} duration={500} to='projects'><p className="navLinks">Projects</p></Link>
-                                <Link className='nav-link' smooth={true} duration={500} to='contact'><p className="navLinks">Contact</p></Link>
+                                <Link className='nav-link' offset={-170} smooth={true} duration={500} to='home'><p className="navLinks">Home</p></Link>
+                                <Link className='nav-link' offset={-110} smooth={true} duration={500} to='about'><p className="navLinks">About</p></Link>
+                                <Link className='nav-link' offset={-110} smooth={true} duration={500} to='projects'><p className="navLinks">Projects</p></Link>
+                                <Link className='nav-link' offset={-110} smooth={true} duration={500} to='contact'><p className="navLinks">Contact</p></Link>
                             </Nav>
                         </NavBar.Collapse>
                     </NavBar>

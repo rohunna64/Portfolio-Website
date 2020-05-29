@@ -26,14 +26,14 @@ function Projects() {
                             <Card.Title>She Got It</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Spring 2020</Card.Subtitle>
                             <Card.Text>
-                                Mobile application serving as a networking and resource hub for women working at Warner Media.
+                                A mobile application serving as a networking and resource hub for women working at Warner Media. She Got It is a social media platform developed to help connect female Warner Media employees with the goal of sharing insights and leveraging connections to succeed in the sports media industry.
                             </Card.Text>
-                            <div className='cardFooter'>
+                            <Card.Footer>
                                 <Card.Link className="mb-2 text-muted">Ionic</Card.Link>
                                 <Card.Link className="mb-2 text-muted">Angular</Card.Link>
                                 <Card.Link className="mb-2 text-muted">Node.js</Card.Link>
                                 <Card.Link className="mb-2 text-muted">MongoDB</Card.Link>
-                            </div>
+                            </Card.Footer>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -44,16 +44,16 @@ function Projects() {
                             <Card.Title>Barcelona Metro System</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Summer 2019</Card.Subtitle>
                             <Card.Text>
-                                Web application modeling the Barcelona Metro System with ability to authorize login credentials, create users, add lines, add stations, leave reviews, etc.
+                                A web application modeling the Barcelona Metro System. The application has the ability to authorize login credentials, create users, add lines, add stations, leave reviews, etc.
                             </Card.Text>
-                            <div className='cardFooter'>
+                            <Card.Footer>
                                 <a href='https://github.com/rohunna64/Barcelona-Metro-System' target='_blank'>
                                     <i id='projectLink' className="fa fa-github"></i>
                                 </a>
                                 <Card.Link className="mb-2 text-muted">Python (Flask)</Card.Link>
                                 <Card.Link className="mb-2 text-muted">SQL</Card.Link>
                                 <Card.Link className="mb-2 text-muted">HTML</Card.Link>
-                            </div>
+                            </Card.Footer>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -64,14 +64,14 @@ function Projects() {
                             <Card.Title>Donation Tracker</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Fall 2018</Card.Subtitle>
                             <Card.Text>
-                                Android application to track donations made to many different donation facilities and includes Google Maps integreation for map view and directions.
+                                An android application to track donations made to many different donation facilities around Atlanta. Users are able to locate different facilities through the app's Google Maps integreation for map view and directions.
                             </Card.Text>
-                            <div className='cardFooter'>
+                            <Card.Footer>
                                 <a href='https://github.com/rohunna64/DonationTracker' target='_blank'>
                                     <i id='projectLink' className="fa fa-github"></i>
                                 </a>
                                 <Card.Link className="mb-2 text-muted">Java</Card.Link>
-                            </div>
+                            </Card.Footer>
                         </Card.Body>
                     </Card>
                 </Col>

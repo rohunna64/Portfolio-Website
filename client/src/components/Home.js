@@ -23,7 +23,7 @@ function Home() {
                         <span className='hello' id='name'>Rohan Bawa</span>
                         <br></br>
                         <span> I am a </span>
-                        <Typed strings={['computer science major.', 'bollywood fusion dancer.', 'sports enthusiast.']}
+                        <Typed strings={['front-end developer.', 'bollywood fusion dancer.', 'sports enthusiast.']}
                              typeSpeed={40}
                              backSpeed={20}
                              backDelay={2000}
@@ -35,7 +35,7 @@ function Home() {
                     </Col>
                 </Row>
             </Container>
-            <Link offset={-150} smooth={true} duration={500} to='about'>
+            <Link offset={-110} smooth={true} duration={500} to='about'>
                 <div className='arrowDiv'>
                     <img class="scrollArrow" src={arrow} />
                 </div>

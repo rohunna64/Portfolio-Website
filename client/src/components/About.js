@@ -25,16 +25,15 @@ function About() {
                     <img className='atlPic' src={atlPic} alt="atlPic" />
                 </Col>
                 <Col className="aboutText" md={6}>
-                    <p>I am a senior at Georgia Tech majoring in computer science, and my concentrations are in People (HCI) and Intelligence (AI/ML).</p>
-                    <p>Previously, I was an web applications intern at Leaseplan USA, and soon, I will be joining American Express as an intern for the summer.</p>
-                    <p>Some of my passions include music, dance, and sports.</p>
+                    <p>I am a senior at Georgia Tech majoring in computer science with concentrations in People (HCI) and Intelligence (AI/ML). I will be graduating in May 2021 with my bachelors in CS as well as a certificate in finance.</p>
+                    <p>Previously, I was a web applications intern at Leaseplan USA, and soon, I will be joining American Express as an intern for the summer. I am proficient in Python, Java, HTML, and CSS, and I have experience working with JavaScript libraries like React, Node, and Angular. Along with that, I am skilled in Photoshop, Illustrator, Premiere Pro, and After Effects.</p>
+                    <p>I have a passion for creating well designed applications. My focus with any project is not only on its functionality but also in ensureing that it looks nice and is easy to use for the average person.</p>
                     <a href={resume} target='_blank' className="button">DOWNLOAD MY RESUME</a>
                 </Col>
+
             </Row>
             <Row>
-                <Col>
-                    <h1 className='bgdAbout'>about</h1>
-                </Col>
+                <h1 className='bgdAbout'>about</h1>
             </Row>
         </Container>
 

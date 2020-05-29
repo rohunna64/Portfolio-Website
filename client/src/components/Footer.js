@@ -12,16 +12,16 @@ function Footer() {
             <Container>
                 <Row>
                     <Col align="center">
-                        <a href='https://www.linkedin.com/in/rohan-bawa'>
+                        <a href='https://www.linkedin.com/in/rohan-bawa' target='_blank'>
                             <i className="fa fa-linkedin"></i>
                         </a>
-                        <a href='https://github.com/rohunna64'>
+                        <a href='https://github.com/rohunna64' target='_blank'>
                             <i className="fa fa-github"></i>
                         </a>
-                        <a href='https://www.behance.net/rohanbawa63fce'>
+                        <a href='https://www.behance.net/rohanbawa63fce' target='_blank'>
                             <i className="fa fa-behance"></i>
                         </a>
-                        <a href='https://www.facebook.com/rohan.bawa'>
+                        <a href='https://www.facebook.com/rohan.bawa' target='_blank'>
                             <i className="fa fa-facebook"></i>
                         </a>
                     </Col>
