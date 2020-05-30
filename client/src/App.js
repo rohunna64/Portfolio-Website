@@ -12,8 +12,7 @@ import {
   Route,
 } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
-import NavBar from 'react-bootstrap/NavBar';
-import NavBarBrand from 'react-bootstrap/NavBarBrand';
+import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 // import { Element, Scroll } from 'react-scroll';
 // var ScrollLink = Scroll.ScrollLink;
@@ -46,19 +45,19 @@ class App extends React.Component {
             <Router>
                 <Container className='p-0' fluid>
 
-                    <NavBar position='sticky' expand='lg'>
-                        <NavBar.Brand id='brand'>ROHAN</NavBar.Brand>
+                    <Navbar position='sticky' expand='lg'>
+                        <Navbar.Brand id='brand'>ROHAN</Navbar.Brand>
 
-                        <NavBar.Toggle aria-controller='navbar-toggle'/>
-                        <NavBar.Collapse id='navbar-toggle'>
+                        <Navbar.Toggle aria-controller='navbar-toggle'/>
+                        <Navbar.Collapse id='navbar-toggle'>
                             <Nav className='ml-auto'>
                                 <Link className='nav-link' offset={-170} smooth={true} duration={500} to='home'><p className="navLinks">Home</p></Link>
                                 <Link className='nav-link' offset={-110} smooth={true} duration={500} to='about'><p className="navLinks">About</p></Link>
                                 <Link className='nav-link' offset={-110} smooth={true} duration={500} to='projects'><p className="navLinks">Projects</p></Link>
                                 <Link className='nav-link' offset={-110} smooth={true} duration={500} to='contact'><p className="navLinks">Contact</p></Link>
                             </Nav>
-                        </NavBar.Collapse>
-                    </NavBar>
+                        </Navbar.Collapse>
+                    </Navbar>
 
 
                     <Element name='home'>
