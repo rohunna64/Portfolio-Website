@@ -2,16 +2,23 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const sendGrid = require('@sendgrid/mail');
+const path = require('path');
 
 const app = express();
+require('dotenv').config();
 
 const PORT = process.env.PORT || 3030;
-
-require('dotenv').config();
 
 app.use(bodyParser.json());
 
 app.use(cors());
+
+express.static(path.join(__dirname, '/client/build'))
+
+// if(process.env.NODE_ENV === 'production'){
+//     //set static folder
+//     app.use(express.static('client/build'));
+// }
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
