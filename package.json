@@ -2,9 +2,9 @@
 	"name": "Portfolio-Website",
 	"version": "1.0.0",
 	"scripts": {
-		"client": "cd client && npm start",
-		"server": "nodemon server.js",
-		"start": "concurrently \"npm run server\" \"npm run client\""
+		"start": "node server.js",
+  		"heroku-postbuild": "cd client && npm install && npm run build"
+		
 	},
 	"dependencies": {
 		"@sendgrid/mail": "^7.1.1",
