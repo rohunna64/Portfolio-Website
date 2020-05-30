@@ -5,6 +5,8 @@ const sendGrid = require('@sendgrid/mail');
 
 const app = express();
 
+const PORT = process.env.PORT || 3030;
+
 require('dotenv').config();
 
 app.use(bodyParser.json());
@@ -48,4 +50,5 @@ app.post('/api/email', (req, res, next) => {
         });
 });
 
-app.listen(3030, '0.0.0.0');
+
+app.listen(PORT, '0.0.0.0');
