@@ -29,7 +29,7 @@ app.post('/api/email', (req, res, next) => {
 
     const msg = {
       to: 'rohanbawa64@gmail.com',
-      from: 'rohanbawa64@gmail.com',
+      from: 'rbawa64@gatech.edu',
       subject: 'Portfolio Website Contact',
       text: 'From: ' + req.body.name + '\nEmail: ' + req.body.email + '\nMessage: ' + req.body.message
     }
