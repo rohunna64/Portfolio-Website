@@ -13,13 +13,6 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
-express.static(path.join(__dirname, '/client/build'))
-
-// if(process.env.NODE_ENV === 'production'){
-//     //set static folder
-//     app.use(express.static('client/build'));
-// }
-
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE');
@@ -57,5 +50,12 @@ app.post('/api/email', (req, res, next) => {
         });
 });
 
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, 'client', 'build', 'index.html')); // relative path
+    });
+}
 
 app.listen(PORT, '0.0.0.0');
