@@ -21,7 +21,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/api', (req, res, next) => {
-    res.send('API Status Running')
+    res.send('API Status Running' + PORT)
 });
 
 app.post('/api/email', (req, res, next) => {
