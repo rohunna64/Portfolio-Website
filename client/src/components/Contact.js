@@ -38,7 +38,7 @@ class Contact extends React.Component {
            emailSent: false
        });
 
-       Axios.post('https://rohan-portfolio-website.herokuapp.com/api/email', this.state)
+       Axios.post('/api/email', this.state)
             .then(res => {
                 if(res.data.success) {
                     this.setState({
