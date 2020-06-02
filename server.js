@@ -25,9 +25,8 @@ app.get('/api', (req, res, next) => {
 });
 
 app.post('/api/email', (req, res, next) => {
-    sendGrid.setApiKey('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')
+    sendGrid.setApiKey(process.env.SENDGRID_API_KEY)
 
-    // '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'
 
     const msg = {
       to: 'rohanbawa64@gmail.com',
