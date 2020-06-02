@@ -5,7 +5,9 @@ const sendGrid = require('@sendgrid/mail');
 const path = require('path');
 
 const app = express();
-require('dotenv').config();
+
+require('dotenv').load();
+console.log(process.env.SENDGRID_API_KEY)
 
 const PORT = process.env.PORT || 3030;
 
