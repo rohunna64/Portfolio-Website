@@ -223,7 +223,7 @@ img.homePic {
 .bgdAbout {
     color: white;
     font-family: 'Gilmer heavy';
-    opacity: 20%;
+    opacity: 0.05;
     font-size: 100px;
     text-align: right;
     margin-top: -50px;
@@ -294,7 +294,7 @@ img.homePic {
 .bgdProjects {
     color: white;
     font-family: 'Gilmer heavy';
-    opacity: 5%;
+    opacity: 0.05;
     font-size: 100px;
     text-align: right;
     margin-top: 30px;
@@ -405,7 +405,7 @@ button:focus {
 .bgdContact {
     color: white;
     font-family: 'Gilmer heavy';
-    opacity: 5%;
+    opacity: 0.05;
     font-size: 100px;
     text-align: left;
     margin-top: -70px;
