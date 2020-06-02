@@ -223,7 +223,7 @@ img.homePic {
 .bgdAbout {
     color: white;
     font-family: 'Gilmer heavy';
-    opacity: 5%;
+    opacity: 20%;
     font-size: 100px;
     text-align: right;
     margin-top: -50px;
@@ -439,4 +439,8 @@ button:focus {
 
 footer {
     background-color: black;
+}
+
+a:hover {
+ cursor:pointer;
 }
