@@ -16,10 +16,13 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 // import { Element, Scroll } from 'react-scroll';
 // var ScrollLink = Scroll.ScrollLink;
+import {Helmet} from "react-helmet";
+
 
 import * as Scroll from 'react-scroll';
 import { Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 let Link = Scroll.Link;
+
 
 
 class App extends React.Component {
@@ -43,6 +46,10 @@ class App extends React.Component {
     render() {
         return (
             <Router>
+                <Helmet>
+                   <title>Rohan Bawa</title>
+                   <link rel="icon" type='image/png' href="images/favicon.png"/>
+                </Helmet>
                 <Container className='p-0' fluid>
 
                     <Navbar position='sticky' expand='lg'>

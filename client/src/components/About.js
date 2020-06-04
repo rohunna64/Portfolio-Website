@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import atlPic from './images/atlPic.jpg'
-import resume from './resources/resumeRP.pdf';
+import resume from './resources/resumeWebsite.pdf';
 
 
 function About() {
