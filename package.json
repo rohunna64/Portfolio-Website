@@ -2,7 +2,7 @@
 	"name": "Portfolio-Website",
 	"version": "1.0.0",
 	"scripts": {
-		"start": "node server2.js",
+		"start": "node server.js",
 		"heroku-postbuild": "cd client && npm install && npm run build"
 	},
 	"dependencies": {
