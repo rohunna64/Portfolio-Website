@@ -1,11 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const sendGrid = require('@sendgrid/mail');
 const path = require('path');
+require('dotenv').config();
+
+const mailjet = require("node-mailjet").connect(process.env.MAILJET_PUBLIC_KEY, process.env.MAILJET_PRIVATE_KEY);
 
 const app = express();
-require('dotenv').config();
+
 
 const PORT = process.env.PORT || 3030;
 
@@ -25,28 +27,21 @@ app.get('/api', (req, res, next) => {
 });
 
 app.post('/api/email', (req, res, next) => {
-    sendGrid.setApiKey(process.env.SENDGRID_API_KEY)
-
-
-    const msg = {
-      to: 'rohanbawa64@gmail.com',
-      from: 'rbawa64@gatech.edu',
-      subject: 'Portfolio Website Contact',
-      text: 'From: ' + req.body.name + '\nEmail: ' + req.body.email + '\nMessage: ' + req.body.message
-    }
-
-    sendGrid.send(msg)
-        .then(result => {
-            res.status(200).json({
-                success: true
-            });
-        })
-        .catch(err => {
-            console.log('error: ', err);
-            res.status(401).json({
-                success: false
-            });
-        });
+    mailjet.post("send", { version: "v3.1" }).request({
+        Messages: [
+            {
+                From: { Email: 'rbawa64@gatech.edu', Name: 'Portfolio Website Contact' },
+                To: [{ Email: 'rohanbawa64@gmail.com', Name: 'Rohan' }],
+                Subject: 'Portfolio Website Contact',
+                TextPart: 'From: ' + req.body.name + '\nEmail: ' + req.body.email + '\nMessage: ' + req.body.message,
+                HTMLPart: "<h2>Name: [[var:name]]<br></h2><h3>Email: [[var:email]]<br>Message: [[var:message]]</h3>",
+                Variables: { name: req.body.name,
+                             email: req.body.email,
+                             message: req.body.message
+                            }
+            }
+        ]
+    });
 });
 
 if (process.env.NODE_ENV === 'production') {
