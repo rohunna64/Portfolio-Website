@@ -49,11 +49,12 @@ class App extends React.Component {
                 <Helmet>
                    <title>Rohan Bawa</title>
                    <link rel="icon" type='image/png' href="images/favicon.png"/>
+                   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 </Helmet>
                 <Container className='p-0' fluid>
 
                     <Navbar position='sticky' expand='lg'>
-                        <Navbar.Brand id='brand'>ROHAN</Navbar.Brand>
+                        <Navbar.Brand class='navbar-brand-mx-auto' id='brand'>ROHAN</Navbar.Brand>
 
                         <Navbar.Toggle aria-controller='navbar-toggle'/>
                         <Navbar.Collapse id='navbar-toggle'>

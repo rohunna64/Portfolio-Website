@@ -153,7 +153,8 @@ img.homePic {
 
 .arrowDiv {
     background-color: transparent;
-    height: 70px;
+    /* height: 70px; */
+    height: 100vh;
     position: relative;
     width: 100%;
     margin-top: 95px;
@@ -443,4 +444,44 @@ footer {
 
 a:hover {
  cursor:pointer;
+}
+
+@media screen and (max-width: 800px) {
+    #p-0 {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    #brand {
+        padding-bottom: 0px;
+    }
+    .homePic {
+        /* order: 1;
+        width: auto;
+        height: 150px;
+        /* margin-bottom: 10px; */
+        display: none;
+    }
+    #homeText {
+        margin-top: 0px;
+        font-size: 30px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .hello {
+        font-size: 50px;
+    }
+    .bgdAbout {
+        display: none;
+    }
+    .bgdProjects {
+        display: none;
+    }
+    .bgdContact {
+        display: none;
+    }
+    .arrowDiv:hover {
+        background-color: transparent;
+    }
+
+
 }

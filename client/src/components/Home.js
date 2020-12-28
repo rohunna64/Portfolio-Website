@@ -16,7 +16,7 @@ function Home() {
 
     return(
         <React.Fragment>
-            <Container>
+            <Container className='homeStuff'>
                 <Row className="homeRow">
                     <Col id="homeText" md={7}>
                         <span className='hello'>Hello, I am </span>
